@@ -26,7 +26,6 @@ padding-left: 120px;
 .ibu-kalian {
   position: relative;
 }
-
 .anak-pungut {
   position: absolute;
   top: 50%;
@@ -36,6 +35,10 @@ padding-left: 120px;
 .dicenter-palalo {
 text-align:center;
 width:320px;
+-webkit-user-select: none; /* Untuk browser berbasis WebKit, seperti Chrome dan Safari */
+-moz-user-select: none; /* Untuk browser berbasis Gecko, seperti Firefox */
+-ms-user-select: none; /* Untuk browser berbasis Trident, seperti Internet Explorer */
+user-select: none;
 }
 
 

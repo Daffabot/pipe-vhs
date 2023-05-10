@@ -5,7 +5,7 @@ background-color: blue;
 }
 #mybg {
 position: absolute; 
-background-image: url('https://media2.giphy.com/media/wmvjR9b5XwI4RI5t6x/200w.webp?cid=ecf05e474x0sqydf7zdmmrcdygdhbbu9f1ctvoqotgwb7ism&ep=v1_gifs_related&rid=200w.webp&ct=g'); 
+background-image: url('../img/effectvhs.webp'); 
 z-index: 0; 
 opacity: 0.5; 
 width: 322px; 

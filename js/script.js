@@ -21,7 +21,7 @@ function startGame() {
     document.getElementById("mybtn").style.display = "none";
 	document.getElementById("mybg").style.display = "block";
     myGameArea = new gamearea();
-    myGamePiece = new component(50, 50, "../img/aliandra.png", 10, 75, "image");
+    myGamePiece = new component(50, 50, "https://www.daffabot.my.id/pipe-vhs/img/aliandra.png", 10, 75, "image");
     myscore = new component("15px", "Consolas", "black", 220, 25, "text");
     myGameArea.start();
 }
@@ -119,8 +119,8 @@ function updateGameArea() {
             min = 55;
             max = 70;
             gap = Math.floor(Math.random()*(max-min+1)+min);
-            myObstacles.push(new component(10, height, "../img/pipe.png", x, 0, "image"));
-            myObstacles.push(new component(10, x - height - gap, "../img/pipe.png", x, height + gap, "image"));
+            myObstacles.push(new component(10, height, "https://www.daffabot.my.id/pipe-vhs/img/pipe.png", x, 0, "image"));
+            myObstacles.push(new component(10, x - height - gap, "https://www.daffabot.my.id/pipe-vhs/img/pipe.png", x, height + gap, "image"));
         }
         for (i = 0; i < myObstacles.length; i += 1) {
             myObstacles[i].x += -1;

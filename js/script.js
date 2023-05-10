@@ -163,16 +163,15 @@ function clearmove(e) {
 const mainDiv = document.getElementById("main");
 let count = 0;
 
-      function totalscore() {
-  count++;
-  const userDiv = document.createElement("div");
-  userDiv.id = "text";
-  userDiv.innerHTML = "<span>" + "</span>";
-  mainDiv.appendChild(userDiv);
-  setTimeout(function() {
-          userDiv.id = "text" + count;
-        }, 1200);
-		
-	const br1 = document.createElement("br");
-	mainDiv.appendChild(br1);
-	}
+function totalscore() {
+count++;
+const userDiv = document.createElement("div");
+userDiv.id = "text";
+userDiv.innerHTML = "<span>" + "</span>";
+mainDiv.appendChild(userDiv);
+setTimeout(function() {
+   userDiv.id = "text" + count;
+}, 1200);
+const br1 = document.createElement("br");
+mainDiv.appendChild(br1);
+}

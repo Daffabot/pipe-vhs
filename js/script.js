@@ -21,7 +21,7 @@ function startGame() {
     document.getElementById("mybtn").style.display = "none";
 	document.getElementById("mybg").style.display = "block";
     myGameArea = new gamearea();
-    myGamePiece = new component(50, 50, "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSfyrFISG_UJIALJwXB5ueAKNQtPT6dRIVpJCAda47oDQ1cu3zRH5oUpw7Eq5vh0V2IkY2zU26sB6Q_BVarJu9naACKxkX7MeESuSm53HiyWzFjAOkNquZbO4vseSk_kN_enSwM84ZRYCDglsFSQZfrZq_s4ihSE-uXwHe3Msf9amDUgLUi9yFf7SY/s50/20230509_182439.png", 10, 75, "image");
+    myGamePiece = new component(50, 50, "../img/aliandra.png", 10, 75, "image");
     myscore = new component("15px", "Consolas", "black", 220, 25, "text");
     myGameArea.start();
 }
@@ -119,8 +119,8 @@ function updateGameArea() {
             min = 55;
             max = 70;
             gap = Math.floor(Math.random()*(max-min+1)+min);
-            myObstacles.push(new component(10, height, "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZkg5h_4ReOMPNVrvFfX1XJ9kljvMyS8vtAL-pwSz05o29rYSt10E390CNp75DI9gKi-E1ptNACE20zJmerRDPuQnjlVcf7EzTqoIBlSepGmpN4JB8VxyKNlhx_88uEIF5wjkGr9NCrE3pWL1NAMRJjdDmLREid8VR64XM2nJos6T8P3uWZdeQIs7G/s100/pipe.png", x, 0, "image"));
-            myObstacles.push(new component(10, x - height - gap, "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZkg5h_4ReOMPNVrvFfX1XJ9kljvMyS8vtAL-pwSz05o29rYSt10E390CNp75DI9gKi-E1ptNACE20zJmerRDPuQnjlVcf7EzTqoIBlSepGmpN4JB8VxyKNlhx_88uEIF5wjkGr9NCrE3pWL1NAMRJjdDmLREid8VR64XM2nJos6T8P3uWZdeQIs7G/s100/pipe.png", x, height + gap, "image"));
+            myObstacles.push(new component(10, height, "../img/pipe.png", x, 0, "image"));
+            myObstacles.push(new component(10, x - height - gap, "../img/pipe.png", x, height + gap, "image"));
         }
         for (i = 0; i < myObstacles.length; i += 1) {
             myObstacles[i].x += -1;

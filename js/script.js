@@ -16,7 +16,6 @@ myscore = {};
 document.getElementById("canvascontainer").innerHTML = "";
 startGame();
 }
-
 function startGame() {
     document.getElementById("mybtn").style.display = "none";
 	document.getElementById("mybg").style.display = "block";

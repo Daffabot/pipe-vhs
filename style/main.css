@@ -54,7 +54,6 @@ user-select: none;
 }
 
 .btn:hover {
-  cursor: pointer;
   background-color: #80BBFF;
 }
 

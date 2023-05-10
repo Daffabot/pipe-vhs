@@ -1,4 +1,4 @@
-//*yang ini jangan diubah karena bagian style in-gamenya*//
+/*yang ini jangan diubah karena bagian style in-gamenya*/
 canvas {
 border:1px solid #d3d3d3;
 background-color: blue;
@@ -39,7 +39,7 @@ width:320px;
 }
 
 
-//*Kalau yang ini mah terserah*//
+/*Kalau yang ini mah terserah*/
 .btn {
   width: 60px;
   height: 30px !important;

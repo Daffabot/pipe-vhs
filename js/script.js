@@ -3,6 +3,18 @@ var myGamePiece;
 var myObstacles = [];
 var myscore;
 document.getElementById("canvascontainer").innerHTML = "";
+var selectedChar = 'https://www.daffabot.my.id/pipe-vhs/img/aliandra.png';
+
+// Tambahkan event listener untuk memilih karakter
+document.getElementById("charSelect").addEventListener("change", function() {
+  selectedChar = this.value;
+  updateChar();
+});
+
+// Fungsi untuk mengubah gambar karakter
+function updateChar() {
+  myGamePiece.image.src = selectedChar;
+}
 
 function restartGame() {
 document.getElementById("myfilter").style.display = "none";
@@ -18,9 +30,10 @@ startGame();
 }
 function startGame() {
     document.getElementById("mybtn").style.display = "none";
+    document.getElementById("charSelect").style.display = "none";
 	document.getElementById("mybg").style.display = "block";
     myGameArea = new gamearea();
-    myGamePiece = new component(50, 50, "https://www.daffabot.my.id/pipe-vhs/img/aliandra.png", 10, 75, "image");
+    myGamePiece = new component(50, 50, selectedChar, 10, 75, "image");
     myscore = new component("15px", "Consolas", "black", 220, 25, "text");
     myGameArea.start();
 }
@@ -98,6 +111,7 @@ function updateGameArea() {
             myGameArea.stop();
             document.getElementById("myfilter").style.display = "block";
             document.getElementById("myrestartbutton").style.display = "block";
+            document.getElementById("charSelect").style.display = "block";
 			totalscore();
 			  setTimeout(function() {
           document.getElementById("text").innerHTML = count + ". SCORE: " + myscore.score;
@@ -125,13 +139,12 @@ function updateGameArea() {
             myObstacles[i].x += -1;
             myObstacles[i].update();
         }
-	
         myscore.text="SCORE: " + myscore.score;        
         myscore.update();
         myGamePiece.x += myGamePiece.speedX;
         myGamePiece.y += myGamePiece.speedY;    
         myGamePiece.update();
-	if (myGamePiece.x < 0) {
+        if (myGamePiece.x < 0) {
         myGamePiece.x = 0;
         } else if (myGamePiece.x + myGamePiece.width > myGameArea.canvas.width) {
         myGamePiece.x = myGameArea.canvas.width - myGamePiece.width;

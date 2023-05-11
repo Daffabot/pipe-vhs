@@ -125,11 +125,23 @@ function updateGameArea() {
             myObstacles[i].x += -1;
             myObstacles[i].update();
         }
+	
         myscore.text="SCORE: " + myscore.score;        
         myscore.update();
         myGamePiece.x += myGamePiece.speedX;
         myGamePiece.y += myGamePiece.speedY;    
         myGamePiece.update();
+	if (myGamePiece.x < 0) {
+        myGamePiece.x = 0;
+        } else if (myGamePiece.x + myGamePiece.width > myGameArea.canvas.width) {
+        myGamePiece.x = myGameArea.canvas.width - myGamePiece.width;
+        }
+        
+        if (myGamePiece.y < 0) {
+        myGamePiece.y = 0;
+        } else if (myGamePiece.y + myGamePiece.height > myGameArea.canvas.height) {
+        myGamePiece.y = myGameArea.canvas.height - myGamePiece.height;
+        }
 		return;
     }
 }

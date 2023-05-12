@@ -33,10 +33,10 @@ padding-left: 120px;
   transform: translate(-50%, 0%);
 }
 form {
-position: absolute;
-  top: 115%;
-  left: 50%;
-  transform: translate(-50%, -100%);
+position: relative;
+  top: 100%;
+  left: 0%;
+  transform: translate(30%, -20%);
 }
 .dicenter-palalo {
 text-align:center;
@@ -49,6 +49,10 @@ user-select: none;
 
 
 /*Kalau yang ini mah terserah*/
+h3 {
+text-align: center;
+}
+
 .btn {
   width: 60px;
   height: 30px !important;
@@ -68,6 +72,10 @@ user-select: none;
 }
 
 select {
+position: relative;
+  top: 100%;
+  left: -10%;
+  transform: translate(0%, 50%);
   padding: 10px;
   border: none;
   font-size: 18px;
@@ -95,4 +103,25 @@ option {
 option:hover {
   background-color: #ddd;
   color: #222;
+}
+
+#mytn {
+position: relative;
+  top: 100%;
+  left: -30%;
+  transform: translate(0%, 100%);
+}
+
+#image-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-95%, 25%);
+  width: 200px;
+  height: 200px;
+  background-image: url('https://www.daffabot.my.id/pipe-vhs/img/aliandra-hd.png');
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }

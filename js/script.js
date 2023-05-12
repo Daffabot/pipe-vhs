@@ -30,7 +30,7 @@ startGame();
 }
 function startGame() {
     document.getElementById("mybtn").style.display = "none";
-    document.getElementById("charSelect").style.display = "none";
+    document.getElementById("form").style.display = "none";
 	document.getElementById("mybg").style.display = "block";
     myGameArea = new gamearea();
     myGamePiece = new component(50, 50, selectedChar, 10, 75, "image");
@@ -111,7 +111,7 @@ function updateGameArea() {
             myGameArea.stop();
             document.getElementById("myfilter").style.display = "block";
             document.getElementById("myrestartbutton").style.display = "block";
-            document.getElementById("charSelect").style.display = "block";
+            document.getElementById("form").style.display = "block";
 			totalscore();
 			  setTimeout(function() {
           document.getElementById("text").innerHTML = count + ". SCORE: " + myscore.score;
@@ -199,3 +199,16 @@ setTimeout(function() {
 const br1 = document.createElement("br");
 mainDiv.appendChild(br1);
 }
+
+const selectEl = document.getElementById('charSelect');
+const containerEl = document.getElementById('image-container');
+
+selectEl.addEventListener('change', function() {
+  const selectedOption = this.options[this.selectedIndex];
+  selectedSrc = selectedOption.getAttribute('data-src');
+  if (selectedSrc) {
+  containerEl.style.backgroundImage = `url(${selectedSrc})`;
+  } else {
+  containerEl.style.backgroundImage = '';
+  }
+});

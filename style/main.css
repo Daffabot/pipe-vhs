@@ -1,4 +1,7 @@
 /*yang ini jangan diubah karena bagian style in-gamenya*/
+html,body {
+overflow-x: hidden;
+}
 canvas {
 border:1px solid #d3d3d3;
 background-color: blue;

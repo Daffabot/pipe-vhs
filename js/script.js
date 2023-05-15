@@ -74,6 +74,10 @@ function component(width, height, color, x, y, type) {
     this.update = function() {
         ctx = myGameArea.context;
         if (this.type == "image") {
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
             ctx.drawImage(this.image, 
                 this.x, 
                 this.y,
@@ -88,20 +92,19 @@ function component(width, height, color, x, y, type) {
         }
     }
     this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
+    var imgData = ctx.getImageData(this.x, this.y, this.width, this.height);
+    for (var i = 0; i <= imgData.data.length; i += 9) {
+    if (imgData.data[i + 36] > 0) {
+    var x = (i / 4) % this.width + this.x;
+    var y = Math.floor((i / 4) / this.width) + this.y;
+    if (x >= otherobj.x && x <= otherobj.x + otherobj.width && y >= otherobj.y && y <= otherobj.y + otherobj.height) {
+    return true;
     }
+    }
+    }
+    return false;
+    }
+    
 }
 
 function updateGameArea() {

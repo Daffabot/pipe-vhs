@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+/* Reset default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles */
+html,body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #222;
+  padding: 20px;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+nav ul li a.selected {
+  background-color: #555;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #222;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Basic styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+}
+
+.quote {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#marquee {
+  margin-top: 10px;
+  font-size: 18px;
+  animation: marquee-animation 15s linear infinite;
+}
+
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#access-button {
+position: absolute;
+bottom: -60px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+.button:active {
+  background-color: #666;
+}
+
+.single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Keywords" content="Game, VHS, Pipe Game, VHS Game, Game Pipe Style VHS, Aliandra, Website">
+  <meta name="Description" content="Game Pipe Style VHS pakai muka Aliandra Daris Naufal yang dibuat oleh Daffabot.">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSfyrFISG_UJIALJwXB5ueAKNQtPT6dRIVpJCAda47oDQ1cu3zRH5oUpw7Eq5vh0V2IkY2zU26sB6Q_BVarJu9naACKxkX7MeESuSm53HiyWzFjAOkNquZbO4vseSk_kN_enSwM84ZRYCDglsFSQZfrZq_s4ihSE-uXwHe3Msf9amDUgLUi9yFf7SY/s50/20230509_182439.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="436">
+  <meta property="og:image:height" content="228">
+  <meta property="og:description" content="Game Pipe Style VHS pakai muka Aliandra Daris Naufal yang dibuat oleh Daffabot.">
+  <title>Game Pipe VHS Player</title>
+</head>
+
+<body>
+  <header>
+    <h1>Game Pipe VHS Player</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html" class="selected">Home</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./credit.html">Credit</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Untuk mengenang masa-masa tempel dan edit muka fl facebook, maka saya sebagai akun Ahmad Marcel Albert membuat game ini dengan style VHS Player.</p>
+    </section>
+
+    <div class="container">
+    <div class="quote">
+    <span>PERINGATAN:</span>
+    <div id="marquee">
+    <p class="single-line">Jangan mencoba mengakses dokumen-dokumen game tanpa izin level 4. Pelanggaran akan dilacak dan ditindak sesuai prosedur pengamanan. Mengakses game ini berarti anda setuju dengan efek samping yang diterima yaitu mual-mual, pusing kepala, kecanduan, halusinasi dan depresi berat. Sekalinya anda mengakses game ini maka tidak ada jalan kembali kesini.</p>
+    </div>
+        </div>
+        <button id="access-button" class="button">Akses Game</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Daffabot & Handrathej. All rights reserved.</p>
+  </footer>
+  <script type="text/javascript">
+  var accessButton = document.getElementById("access-button");
+  
+  accessButton.addEventListener("click", function() {
+  var confirmation = confirm("Apakah Anda yakin ingin mengakses dokumen?");
+  
+  if (confirmation) {
+  // Kode akses dokumen
+  alert("Anda telah mengakses dokumen.");
+  window.location.href = "./start.html";
+  } else {
+  alert("Akses dokumen dibatalkan.");
+  }
+  });
+  
+  </script>
+</body>
+
+</html>

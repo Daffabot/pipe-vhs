@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+/* Reset default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles */
+html,body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #222;
+  padding: 20px;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+nav ul li a.selected {
+  background-color: #555;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #222;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Basic styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+}
+
+.quote {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#marquee {
+  margin-top: 10px;
+  font-size: 18px;
+  animation: marquee-animation 15s linear infinite;
+}
+
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#access-button {
+position: absolute;
+bottom: -60px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+.button:active {
+  background-color: #666;
+}
+
+.single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.facebook-profiles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facebook-profiles li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.facebook-profiles li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.facebook-profiles li p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.facebook-profiles li a {
+  text-decoration: none;
+  color: #000;
+  background-color: #e9e9e9;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.facebook-profiles li a:hover {
+  background-color: #ccc;
+}
+
+.special-thanks {
+  margin-top: 50px;
+}
+
+.special-thanks h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.special-thanks ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.special-thanks li {
+  width: 300px;
+  margin: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.special-thanks li img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.special-thanks li h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.special-thanks li p {
+  font-size: 18px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <h1>Credit</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./credit.html" class="selected">Credit</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="credit">
+      <h2>Credit</h2>
+         <p>Terima kasih yang sudah ikutan di game ini. Maaf bila ada yang tidak masuk tolong hubungi <a href="mailto:daffabot@programmer.net" >saya</a></p>
+         <br><br>
+          <ul class="facebook-profiles">
+          <li>
+          <img src="https://z-m-scontent.fcgk4-2.fna.fbcdn.net/v/t39.30808-6/321500672_537852198384101_7224302179137922348_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=109&ccb=1-7&_nc_sid=85a577&_nc_ohc=-4lperVREhEAX83slhp&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_zt=23&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-2.fna&oh=00_AfDTL8ZtGnU_Ge8RUOhW1-9XsTGlSQeA3Luaz6BOM9KZQQ&oe=6468D06D" alt="Profile 1">
+          <p>Arthur Kirkland KF</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/arthur.k.ii.5">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://z-m-scontent.fcgk4-4.fna.fbcdn.net/v/t39.30808-6/295692237_587080976461324_3530348291857186263_n.jpg?stp=cp0_dst-jpg_e15_p370x247_q65&_nc_cat=105&ccb=1-7&_nc_sid=85a577&_nc_ohc=wofd0lpZEmQAX8GOpk4&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_zt=23&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-4.fna&oh=00_AfBpRrl5KuzY-jh7dpTkgyk7wqJRhXvjOKaHVsqwxFwrMA&oe=64678E1E" alt="Profile 2">
+          <p>Azzam Afton</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/azzam.gaming.3557">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://www.daffabot.my.id/pipe-vhs/img/kopralraden-hd.png" alt="Profile 1">
+          <p>Kopral Raden</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/raden.rakani.1">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://z-m-scontent.fcgk4-6.fna.fbcdn.net/v/t39.30808-6/278505503_101966275830378_8195040819912859189_n.jpg?stp=cp0_dst-jpg_e15_p370x247_q65&_nc_cat=108&ccb=1-7&_nc_sid=85a577&_nc_ohc=nbd-JZ-TxTsAX_uORkT&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_zt=23&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-6.fna&oh=00_AfACUaAKnU7viuQRgSXEo7f9xDAicYleS9eqry3Athmatg&oe=64679C72" alt="Profile 2">
+          <p>Ludwig Franz Stigler</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/profile.php?id=100080510164558">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://z-m-scontent.fcgk4-4.fna.fbcdn.net/v/t1.6435-9/149557252_218024816707833_7022879957069909872_n.jpg?stp=cp0_dst-jpg_e15_q65_s417x417&_nc_cat=105&ccb=1-7&_nc_sid=85a577&_nc_ohc=LLr2uhyXMR4AX-cUSBV&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-4.fna&oh=00_AfAiLYf4ZOU6ze4xQBDECBNKsQyGyPiNBOmtHsxhr28GKw&oe=648B02F7" alt="Profile 2">
+          <p>Otto Carius</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/roy.kimochi.92505956">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://z-m-scontent.fcgk4-4.fna.fbcdn.net/v/t39.30808-6/344893515_783788856347562_579787736630147785_n.jpg?stp=cp0_dst-jpg_e15_p370x247_q65&_nc_cat=105&ccb=1-7&_nc_sid=85a577&_nc_ohc=GJ2hi8U9HKAAX-0pVvi&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_zt=23&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-4.fna&oh=00_AfBq9l3_P2EIjA5bbT-6mc78L6QJqfmiDHkfm6-AWEWO1g&oe=646947B8" alt="Profile 1">
+          <p>P Azured</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/minato.aqua.923">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://z-m-scontent.fcgk4-5.fna.fbcdn.net/v/t39.30808-6/339927482_900163917873462_4601788772751622180_n.jpg?stp=cp0_dst-jpg_e15_p370x247_q65&_nc_cat=111&ccb=1-7&_nc_sid=85a577&_nc_ohc=LOw0qNILqcIAX-rFzhN&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_zt=23&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-5.fna&oh=00_AfB7gWIOfMwypK8gfUMPrBcgemy6aBfZLfDhwJ8PFtujCg&oe=6467C75E" alt="Profile 2">
+          <p>Sanak Subur</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/fardan.syafiq">Visit Profile</a>
+          </li>
+          <li>
+          <img src="https://www.daffabot.my.id/pipe-vhs/img/tomalexander-hd.png" alt="Profile 1">
+          <p>Tom Alexander</p>&nbsp;&nbsp;
+          <a href="https://www.facebook.com/profile.php?id=100080494191626">Visit Profile</a>
+          </li>
+          <!-- Tambahkan profil Facebook lainnya sesuai kebutuhan -->
+          </ul>
+          
+          </section>
+          
+          <div class="special-thanks">
+          <h2>Special Thanks</h2>
+          <ul>
+          <li>
+          <img src="https://avatars.githubusercontent.com/u/96946212?v=4" alt="Avatar">
+          <h3>Daffabot</h3>
+          <p>Lead Developer</p>
+          </li>
+          <li>
+          <img src="https://avatars.githubusercontent.com/u/97798852?v=4" alt="Avatar">
+          <h3>Handrathej</h3>
+          <p>Tukang Nyampah</p>
+          </li>
+          <li>
+          <img src="https://z-m-scontent.fcgk4-6.fna.fbcdn.net/v/t39.30808-6/346067781_534573181995651_3311161518230942070_n.jpg?stp=cp0_dst-jpg_e15_p370x247_q65&_nc_cat=102&ccb=1-7&_nc_sid=85a577&_nc_ohc=hUro-Al6RA8AX8ikfYv&_nc_ad=z-m&_nc_cid=1230&_nc_eh=ecea34e0a0b76b40e91edbffadaffa16&_nc_zt=23&_nc_rml=0&_nc_ht=z-m-scontent.fcgk4-6.fna&oh=00_AfBeJWIlyMMVrcMkV8K5F0hvoyngC1gXXebkTt-JupMeHQ&oe=6467E0E5" alt="Avatar">
+          <h3>Tibetan Sand Fox</h3>
+          <p>Temen Laknat Ngartis</p>
+          </li>
+          </ul>
+          </div>
+          
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Daffabot & Handrathej. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

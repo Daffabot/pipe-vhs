@@ -110,7 +110,7 @@ span {
 
 #access-button {
 position: absolute;
-bottom: -60px;
+bottom: -120px;
 }
 
 .button {
@@ -192,14 +192,14 @@ bottom: -60px;
   var accessButton = document.getElementById("access-button");
   
   accessButton.addEventListener("click", function() {
-  var confirmation = confirm("Apakah Anda yakin ingin mengakses dokumen?");
+  var confirmation = confirm("Apakah Anda yakin ingin mengakses game?");
   
   if (confirmation) {
   // Kode akses dokumen
-  alert("Anda telah mengakses dokumen.");
+  alert("Anda telah mengakses game.");
   window.location.href = "./start.html";
   } else {
-  alert("Akses dokumen dibatalkan.");
+  alert("Akses game dibatalkan.");
   }
   });
   

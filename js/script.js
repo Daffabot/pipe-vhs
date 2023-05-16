@@ -17,6 +17,8 @@ function updateChar() {
 }
 
 function restartGame() {
+document.getElementById("loadingit()").play();
+document.getElementById("loadingit()").loop = true;
 document.getElementById("myfilter").style.display = "none";
 document.getElementById("myrestartbutton").style.display = "none";
 myGameArea.stop();
@@ -29,7 +31,9 @@ document.getElementById("canvascontainer").innerHTML = "";
 startGame();
 }
 function startGame() {
-    document.getElementById("mybtn").style.display = "none";
+    document.getElementById("loadingit()").play();
+    document.getElementById("loadingit()").loop = true;
+    document.getElementById("kontolodon").style.display = "none";
     document.getElementById("form").style.display = "none";
 	document.getElementById("mybg").style.display = "block";
     myGameArea = new gamearea();
@@ -40,8 +44,8 @@ function startGame() {
 
 function gamearea() {
     this.canvas = document.createElement("canvas");
-    this.canvas.width = 320;
-    this.canvas.height = 180;    
+    this.canvas.width = 215;
+    this.canvas.height = 160;    
     document.getElementById("canvascontainer").appendChild(this.canvas);
     this.context = this.canvas.getContext("2d");
     this.pause = false;
@@ -86,10 +90,11 @@ function component(width, height, color, x, y, type) {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
         } if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
-            ctx.fillText(this.text, this.x, this.y);
+        ctx.font = this.width + " " + this.height;
+        ctx.fillStyle = color;
+        ctx.fillText(this.text, 120, 20); // menyesuaikan nilai x dan y untuk menempatkan teks di sudut kiri bawah
         }
+        
     }
     this.crashWith = function(otherobj) {
     var imgData = ctx.getImageData(this.x, this.y, this.width, this.height);
@@ -115,6 +120,8 @@ function updateGameArea() {
             document.getElementById("myfilter").style.display = "block";
             document.getElementById("myrestartbutton").style.display = "block";
             document.getElementById("form").style.display = "block";
+            document.getElementById("loadingit()").loop = false;
+            document.getElementById("loadingit()").pause();
 			totalscore();
 			  setTimeout(function() {
           document.getElementById("text").innerHTML = count + ". SCORE: " + myscore.score;
@@ -215,3 +222,16 @@ selectEl.addEventListener('change', function() {
   containerEl.style.backgroundImage = '';
   }
 });
+
+var link = document.getElementById('mybtn');
+var element = document.getElementById('myElement');
+  
+  link.addEventListener('click', function() {
+    element.classList.remove('hidden');
+    element.classList.add('animate');
+    document.getElementById("mybtn").style.display = "none";
+    document.getElementById("playit()").play();
+    setTimeout(function() {
+    startGame();
+    }, 3100);
+  });

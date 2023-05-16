@@ -75,7 +75,7 @@ background-image: url('../img/kertas.png');
 z-index: -3; 
 opacity: 1; 
 width: 100%; 
-height: 90vw; 
+height: 322px; 
 object-fit: cover;
 background-size: cover;
 }

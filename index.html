@@ -149,7 +149,7 @@ bottom: -120px;
 .content{
   display: none;
 }
-.splash-screen{
+#splash-screen{
   cursor : pointer;
   position : fixed;
   top : 50%;
@@ -158,14 +158,11 @@ bottom: -120px;
   width : 100%;
   transform : translate(-50%,-50%);    
   transition : all ease-in-out 600ms;
+  display: block;
 }
-.splash-screen img{
+#splash-screen img{
   max-width: 100%;
   max-height: 100%;
-}
-.hidden{
-  transition : 0.5s;
-  display : none;
 }
 
 .btn {
@@ -176,6 +173,9 @@ bottom: -120px;
   left : 50%;
   transform : translateX(-50%);
 }
+ #splash-screen:target {
+ display: none;
+ }
 </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -197,7 +197,7 @@ bottom: -120px;
 
   <nav>
     <ul>
-      <li><a href="./index.html" class="selected">Home</a></li>
+      <li><a href="./index.html#splash-screen" class="selected">Home</a></li>
       <li><a href="./contact.html">Contact</a></li>
       <li><a href="./credit.html">Credit</a></li>
     </ul>
@@ -224,8 +224,8 @@ bottom: -120px;
     <p>&copy; 2023 Daffabot & Handrathej. All rights reserved.</p>
   </footer>
   </div>
-  <div class="splash-screen">
-  <img src="./img/a1daffabotcollab.png" alt="Splash Screen Image">
+  <div id="splash-screen">
+  <img src="https://www.daffabot.my.id/pipe-vhs/img/a1daffabotcollab.png" alt="Splash Screen Image">
   </div>
   <script type="text/javascript">
   var accessButton = document.getElementById("access-button");
@@ -242,12 +242,13 @@ bottom: -120px;
   }
   });
   
- var splashScreen = document.querySelector('.splash-screen');
+ var splashScreen = document.getElementById('splash-screen');
  splashScreen.addEventListener('click',()=>{
  splashScreen.style.opacity = 0;
  setTimeout(()=>{
- splashScreen.classList.add('hidden');
  document.querySelector('.content').style.display = "block";
+ // Memberikan hash fragment ke URL
+ window.location.hash = "splash-screen";
  },610)
  })
   

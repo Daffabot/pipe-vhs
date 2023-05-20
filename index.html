@@ -146,22 +146,36 @@ bottom: -120px;
   text-overflow: ellipsis;
 }
 
-.splash-screen {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 1s ease-out;
+.content{
+  display: none;
 }
-
-.splash-screen img {
+.splash-screen{
+  cursor : pointer;
+  position : fixed;
+  top : 50%;
+  left : 50%;
+  height : 100%;
+  width : 100%;
+  transform : translate(-50%,-50%);    
+  transition : all ease-in-out 600ms;
+}
+.splash-screen img{
   max-width: 100%;
   max-height: 100%;
 }
-
-.content {
-display: none;
+.hidden{
+  transition : 0.5s;
+  display : none;
 }
 
+.btn {
+/*   border : none; */
+/*   padding : 10px; */
+/*   position : fixed; */
+  z-index : -1;
+  left : 50%;
+  transform : translateX(-50%);
+}
 </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -176,9 +190,6 @@ display: none;
 </head>
 
 <body>
-<div class="splash-screen">
-    <img src="./img/a1daffabotcollab.png" alt="Splash Screen Image">
-  </div>
   <div class="content">
   <header>
     <h1>Game Pipe VHS Player</h1>
@@ -213,6 +224,9 @@ display: none;
     <p>&copy; 2023 Daffabot & Handrathej. All rights reserved.</p>
   </footer>
   </div>
+  <div class="splash-screen">
+  <img src="https://www.daffabot.my.id/pipe-vhs/img/a1daffabotcollab.png" alt="Splash Screen Image">
+  </div>
   <script type="text/javascript">
   var accessButton = document.getElementById("access-button");
   
@@ -228,17 +242,14 @@ display: none;
   }
   });
   
-  
-  document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function() {
-  document.querySelector(".splash-screen").style.opacity = "0";
-  setTimeout(function() {
-  document.querySelector(".splash-screen").style.display = "none";
-  document.querySelector(".content").style.display = "block";
-  // Tambahkan kode untuk memuat halaman utama atau tindakan lain setelah splash screen ditampilkan
-  }, 1000); // Waktu penundaan sebelum menghilangkan splash screen setelah memudar (dalam milidetik)
-  }, 3000); // Waktu tampilan splash screen (dalam milidetik)
-  });
+ var splashScreen = document.querySelector('.splash-screen');
+ splashScreen.addEventListener('click',()=>{
+ splashScreen.style.opacity = 0;
+ setTimeout(()=>{
+ splashScreen.classList.add('hidden');
+ document.querySelector('.content').style.display = "block";
+ },610)
+ })
   
   </script>
 </body>

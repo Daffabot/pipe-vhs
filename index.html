@@ -3,10 +3,6 @@
 <head>
 <style type="text/css">
 /* Reset default styles */
-body {
-overflow-y: none;
-}
-
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -146,9 +142,6 @@ bottom: -120px;
   text-overflow: ellipsis;
 }
 
-.content{
-  display: none;
-}
 #splash-screen{
   cursor : pointer;
   position : fixed;
@@ -161,8 +154,9 @@ bottom: -120px;
   display: block;
 }
 #splash-screen img{
-  max-width: 100%;
-  max-height: 100%;
+  object-fit: cover;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .btn {
@@ -190,7 +184,7 @@ bottom: -120px;
 </head>
 
 <body>
-  <div class="content">
+  <div class="content" id="content">
   <header>
     <h1>Game Pipe VHS Player</h1>
   </header>
@@ -249,14 +243,28 @@ bottom: -120px;
  window.location.hash = "#splash-screen";
  },610)
  })
+ window.addEventListener("DOMContentLoaded", function() {
+ // Mendapatkan hash fragment saat ini dari URL
+ var currentHash = window.location.hash;
+ 
+ // Melakukan pengecekan atau tindakan lain berdasarkan hash fragment saat ini
+ if (currentHash === "#splash-screen") {
+ document.getElementById("content").style.display = "block";
+ 
+ } else {
+ document.getElementById("content").style.display = "none";
+ }
+ });
  window.addEventListener("hashchange", function() {
  // Mendapatkan hash fragment saat ini dari URL
  var currentHash = window.location.hash;
  
  // Melakukan pengecekan atau tindakan lain berdasarkan hash fragment saat ini
- if ( currentHash === "#splash-screen") {
- // Hash fragment #nama ada dalam URL
- document.querySelector('.content').style.display = "block";
+ if (currentHash === "#splash-screen") {
+ document.getElementById("content").style.display = "block";
+ 
+ } else {
+ document.getElementById("content").style.display = "none";
  }
  });
   </script>

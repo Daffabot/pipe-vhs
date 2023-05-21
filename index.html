@@ -244,14 +244,21 @@ bottom: -120px;
   
  var splashScreen = document.getElementById('splash-screen');
  splashScreen.addEventListener('click',()=>{
- splashScreen.style.opacity = 0;
  setTimeout(()=>{
- document.querySelector('.content').style.display = "block";
  // Memberikan hash fragment ke URL
- window.location.hash = "splash-screen";
+ window.location.hash = "#splash-screen";
  },610)
  })
-  
+ window.addEventListener("hashchange", function() {
+ // Mendapatkan hash fragment saat ini dari URL
+ var currentHash = window.location.hash;
+ 
+ // Melakukan pengecekan atau tindakan lain berdasarkan hash fragment saat ini
+ if ( currentHash === "#splash-screen") {
+ // Hash fragment #nama ada dalam URL
+ document.querySelector('.content').style.display = "block";
+ }
+ });
   </script>
 </body>
 

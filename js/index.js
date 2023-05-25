@@ -1,7 +1,7 @@
 var accessButton = document.getElementById("access-button");
   
   accessButton.addEventListener("click", function() {
-  var confirmation = confirm("Apakah Anda yakin ingin mengakses dokumen?");
+  var confirmation = confirm("Apakah Anda yakin ingin mengakses game?");
   
   if (confirmation) {
   // Kode akses dokumen

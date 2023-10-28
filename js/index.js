@@ -5,7 +5,6 @@ var accessButton = document.getElementById("access-button");
   
   if (confirmation) {
   // Kode akses dokumen
-  alert("Anda telah mengakses game.");
   window.location.href = "./main/start.html";
   } else {
   alert("Akses game dibatalkan.");

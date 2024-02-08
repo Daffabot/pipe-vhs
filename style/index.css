@@ -4,7 +4,8 @@ body, h1, h2, p, ul, li {
 }
 
 /* Basic styles */
-html,body {
+html,
+body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   overflow-x: hidden;
@@ -66,7 +67,7 @@ section h2 {
 #footer {
   position: absolute;
   bottom: 0px;
-  width: 100%;
+  width: -webkit-fill-available;
   background-color: #222;
   padding: 10px;
   color: #fff;

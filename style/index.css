@@ -64,6 +64,13 @@ section h2 {
   margin-bottom: 10px;
 }
 
+.display {
+  max-height: 100vh;
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
 #footer {
   position: absolute;
   bottom: 0px;

@@ -1,68 +1,112 @@
 <html lang="en-US">
-<head>
-<title>Game Pipe Style VHS</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../style/main.css">
-</head>
+  <head>
+    <title>Game Pipe Style VHS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style/main.css" />
+  </head>
 
-<body>
-<div class="ibu-kalian">
-<div class="anak-pungut">
-<div id="pilihkontol">
-<form id="form">
-<div id="image-container"></div>
-<select id="charSelect" type="text" value="https://www.daffabot.my.id/pipe-vhs/img/aliandra.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/aliandra.png" style="display: block; text-align: center;">
-  <option selected disabled>Pilih Karakter</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/aliandra.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/aliandra-hd.png">Tibetan Sand Fox</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/ahmadmarcelalbert.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/ahmadmarcelalbert-hd.png">Ahmad Marcel Albert</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/arthurkirkland.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/arthurkirklandkf-hd.png">Arthur Kirkland KF</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/azzamafton.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/azzamafton-hd.png">Azzam Afton</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/bobby.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/bobby-hd.png">Bobby</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/handrathej.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/handrathej-hd.png">Handra The Jelek</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/helghy.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/helghy-hd.png">Helghy Anaknya Handra</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/kopralraden.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/kopralraden-hd.png">Kopral Raden</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/kristenjoselin.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/kristenjoselin-hd.png">Kristen Joselin</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/ludwigfranzstigler.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/ludwigfranzstigler-hd.png">Ludwig Franz Stigler</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/ottocarius.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/ottocarius-hd.png">Otto Carius</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/pazured.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/pazured-hd.png">P Azured</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/sanaksubur.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/sanaksubur-hd.png">Sanak Subur</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/surya.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/surya-hd.png">Surya</option>
-  <option value="https://www.daffabot.my.id/pipe-vhs/img/tomalexander.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/tomalexander-hd.png">Tom Alexander</option>  
-  </select>
-</form>
-</div>
-<audio id="playit()" src="../sound/play.mp3" preload="auto"></audio>
-<audio id="loadingit()" src="../sound/loading.mp3" preload="auto"></audio>
-<div id="bgtv">
-<div id="mybg" style="display: none;"></div>
-<div id="myfilter" style="display: none;"></div>
-<div id="myrestartbutton" style="display: none;"><button onclick="restartGame()">Restart</button></div>
-<div id="canvascontainer"><canvas width="320" height="180"></canvas></div>
-</div>
-<div id="meja">
-</div>
-<div class="dicenter-palalo">
-<div id="kontolodon"><br></div>
- <img id="mybtn" src="../img/tape.png" alt="Button Image">
-  <div id="myElement" class="hidden"></div>
-  </div>
-<div id="kontol" class="dicenter-palalo">
-<br>
-  <button ontouchstart="moveup()" onmousedown="moveup()" onmouseup="clearmove()" class="btn"><b>&#x25B2;</b></button><br>
-  <button ontouchstart="moveleft()" onmousedown="moveleft()" onmouseup="clearmove()" class="btn"><b>&#x25C0;</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <button ontouchstart="moveright()" onmousedown="moveright()" onmouseup="clearmove()" class="btn"><b>&#x25B6;</b></button><br>
-  <button ontouchstart="movedown()" onmousedown="movedown()" onmouseup="clearmove()" class="btn"><b>&#x25BC;</b></button>
-</div>
-<main id="master">
-	<div id="main">
-          <div id="score">
-		  <p><b>SCORE</b></p>
-	  </div>
+  <body>
+    <div class="ibu-kalian">
+      <div class="anak-pungut">
+        <div id="pilihkontol">
+          <form id="form">
+            <div id="image-container"></div>
+            <select id="charSelect" type="text" value="https://www.daffabot.my.id/pipe-vhs/img/aliandra.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/aliandra.png" style="display: block; text-align: center">
+              <option selected disabled>Pilih Karakter</option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/aliandra.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/aliandra-hd.png">
+                Tibetan Sand Fox
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/ahmadmarcelalbert.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/ahmadmarcelalbert-hd.png">
+                Ahmad Marcel Albert
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/arthurkirkland.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/arthurkirklandkf-hd.png">
+                Arthur Kirkland KF
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/azzamafton.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/azzamafton-hd.png">
+                Azzam Afton
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/bobby.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/bobby-hd.png">
+                Bobby
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/handrathej.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/handrathej-hd.png">
+                Handra The Jelek
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/helghy.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/helghy-hd.png">
+                Helghy Anaknya Handra
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/kopralraden.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/kopralraden-hd.png">
+                Kopral Raden
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/kristenjoselin.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/kristenjoselin-hd.png">
+                Kristen Joselin
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/ludwigfranzstigler.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/ludwigfranzstigler-hd.png">
+                Ludwig Franz Stigler
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/ottocarius.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/ottocarius-hd.png">
+                Otto Carius
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/pazured.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/pazured-hd.png">
+                P Azured
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/sanaksubur.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/sanaksubur-hd.png">
+                Sanak Subur
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/surya.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/surya-hd.png">
+                Surya
+              </option>
+              <option value="https://www.daffabot.my.id/pipe-vhs/img/tomalexander.png" data-src="https://www.daffabot.my.id/pipe-vhs/img/tomalexander-hd.png">
+                Tom Alexander
+              </option>
+            </select>
+          </form>
         </div>
-</main>
-<script src="../js/script.js"></script>
-</div>
-</div>
-</body>
+        <audio id="playit()" src="../sound/play.mp3" preload="auto"></audio>
+        <audio id="loadingit()" src="../sound/loading.mp3" preload="auto"></audio>
+        <div id="bgtv">
+          <div id="mybg" style="display: none"></div>
+          <div id="myfilter" style="display: none"></div>
+          <div id="myrestartbutton" style="display: none">
+            <button onclick="restartGame()">Restart</button>
+          </div>
+          <div id="canvascontainer">
+            <canvas width="320" height="180"></canvas>
+          </div>
+        </div>
+        <div id="meja"></div>
+        <div class="dicenter-palalo">
+          <div id="kontolodon"><br /></div>
+          <img id="mybtn" src="../img/tape.png" alt="Button Image" />
+          <div id="myElement" class="hidden"></div>
+        </div>
+        <div id="kontol" class="dicenter-palalo">
+          <br />
+          <button ontouchstart="moveup()" onmousedown="moveup()" onmouseup="clearmove()" class="btn">
+            <b>&#x25B2;</b>
+          </button>
+          <br />
+          <button ontouchstart="moveleft()" onmousedown="moveleft()" onmouseup="clearmove()" class="btn">
+            <b>&#x25C0;</b>
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button ontouchstart="moveright()" onmousedown="moveright()" onmouseup="clearmove()" class="btn">
+            <b>&#x25B6;</b>
+          </button>
+          <br />
+          <button ontouchstart="movedown()" onmousedown="movedown()" onmouseup="clearmove()" class="btn">
+            <b>&#x25BC;</b>
+          </button>
+        </div>
+        <main id="master">
+          <div id="main">
+            <div id="score">
+              <p><b>SCORE</b></p>
+            </div>
+          </div>
+        </main>
+        <script src="../js/script.js"></script>
+      </div>
+    </div>
+  </body>
 </html>

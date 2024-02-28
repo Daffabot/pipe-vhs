@@ -1,59 +1,64 @@
 /*yang ini jangan diubah karena bagian style in-gamenya*/
-html,body {
-overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
 body {
-background-image: url("../img/bgutam.png");
-background-size: cover;
+  background-image: url("../img/bgutam.png");
+  background-size: cover;
   background-attachment: fixed;
 }
+#score {
+  margin-top: 8em;
+  text-align: center;
+}
 canvas {
-margin-top: 22px;
-margin-left: 22px;
-border:1px solid #d3d3d3;
-background-color: blue;
+  margin-top: 22px;
+  margin-left: 22px;
+  border: 1px solid #d3d3d3;
+  background-color: blue;
 }
 #mybg {
-margin-top: 22px;
-margin-left: 22px;
-position: absolute; 
-background-image: url('../img/effectvhs.webp'); 
-z-index: 0; 
-opacity: 0.5; 
-width: 215px; 
-height: 160px; 
+  margin-top: 22px;
+  margin-left: 22px;
+  position: absolute;
+  background-image: url("../img/effectvhs.webp");
+  z-index: 0;
+  opacity: 0.5;
+  width: 215px;
+  height: 160px;
 }
 #myfilter {
-margin-top: 22px;
-margin-left: 22px;
-position: absolute; 
-background-color: rgb(0, 0, 0); 
-opacity: 0.3; 
-width: 215px; 
-height: 160px; 
+  margin-top: 22px;
+  margin-left: 22px;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.3;
+  width: 215px;
+  height: 160px;
 }
 #myrestartbutton {
-margin-top: 22px;
-position: absolute; 
-padding-top: 75px; 
-padding-left: 120px; 
+  margin-top: 22px;
+  position: absolute;
+  padding-top: 75px;
+  padding-left: 120px;
 }
 #bgtv {
-position: relative;
-background-image: url('../img/bgtv.png'); 
-z-index: 0; 
-opacity: 1; 
-width: 322px; 
-height: 350px; 
+  position: relative;
+  background-image: url("../img/bgtv.png");
+  z-index: 0;
+  opacity: 1;
+  width: 322px;
+  height: 350px;
 }
 #meja {
-margin-top: -28px;
-position: fixed;
-background-image: url('../img/meja.png'); 
-z-index: -2; 
-opacity: 1;
-width: 322px; 
-height: 370px; 
+  margin-top: -28px;
+  position: fixed;
+  background-image: url("../img/meja.png");
+  z-index: -2;
+  opacity: 1;
+  width: 322px;
+  height: 370px;
 }
 .ibu-kalian {
   position: relative;
@@ -65,40 +70,40 @@ height: 370px;
   transform: translate(-50%, 0%);
 }
 form {
-position: relative;
+  position: relative;
   top: 65px;
   left: 0%;
   transform: translate(30%, -20%);
 }
 #pilihkontol {
-background-image: url('../img/kertas.png'); 
-z-index: -3; 
-opacity: 1; 
-width: 100%; 
-height: 322px; 
-object-fit: cover;
-background-size: cover;
+  background-image: url("../img/kertas.png");
+  z-index: -3;
+  opacity: 1;
+  width: 100%;
+  height: 322px;
+  object-fit: cover;
+  background-size: cover;
 }
 .dicenter-palalo {
-text-align:center;
-width:320px;
--webkit-user-select: none; /* Untuk browser berbasis WebKit, seperti Chrome dan Safari */
--moz-user-select: none; /* Untuk browser berbasis Gecko, seperti Firefox */
--ms-user-select: none; /* Untuk browser berbasis Trident, seperti Internet Explorer */
-user-select: none;
+  text-align: center;
+  width: 320px;
+  -webkit-user-select: none; /* Untuk browser berbasis WebKit, seperti Chrome dan Safari */
+  -moz-user-select: none; /* Untuk browser berbasis Gecko, seperti Firefox */
+  -ms-user-select: none; /* Untuk browser berbasis Trident, seperti Internet Explorer */
+  user-select: none;
 }
 
 /*Kalau yang ini sama aja jangan diubah tanpa seizinku ngentot, susah tau buatnya*/
 h3 {
-text-align: center;
+  text-align: center;
 }
 
 .btn {
   padding: 11px 20px;
   border: none;
   border-radius: 50%;
-  background-color: #A9A9A9;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  background-color: #a9a9a9;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
 }
 
@@ -113,7 +118,7 @@ text-align: center;
 }
 
 select {
-position: relative;
+  position: relative;
   top: 100%;
   left: -10%;
   transform: translate(0%, 50%);
@@ -147,19 +152,19 @@ option:hover {
 }
 
 #kontol {
-position: relative;
-background-image: url('../img/kontoler.png'); 
-z-index: 0; 
-opacity: 1; 
-width: 322px; 
-height: 170px;
-object-fit: fill;
+  position: relative;
+  background-image: url("../img/kontoler.png");
+  z-index: 0;
+  opacity: 1;
+  width: 322px;
+  height: 170px;
+  object-fit: fill;
 }
 
 #mybtn {
-display: block;
-position: relative;
-border: none;
+  display: block;
+  position: relative;
+  border: none;
   margin: 0;
   background: none;
   top: -100px;
@@ -168,21 +173,21 @@ border: none;
 }
 
 .hidden {
-display: none;
+  display: none;
 }
 
 .animate {
-position: relative;
-top: -30px;
+  position: relative;
+  top: -30px;
   left: 28%;
   transform: translate(0%, 100%);
-animation: btn 3s linear 0s 1 normal forwards;
+  animation: btn 3s linear 0s 1 normal forwards;
   -webkit-animation-name: btn;
   animation-name: btn;
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
   border: none;
-width: 150px;
+  width: 150px;
   height: 70px;
   object-fit: cover;
   z-index: 6;
@@ -190,23 +195,23 @@ width: 150px;
 }
 
 @keyframes btn {
-	0% {
-		opacity: 1;
-		transform: translateY(0px);
-		z-index: 6;
-	}
-	
-	95% {
-	    opacity: 1;
-	    transform: translateY(-78px);
-	    z-index: 6;
-	}
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+    z-index: 6;
+  }
 
-	100% {
-		opacity: 0;
-		transform: translateY(-88px);
-		z-index: 6;
-	}
+  95% {
+    opacity: 1;
+    transform: translateY(-78px);
+    z-index: 6;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-88px);
+    z-index: 6;
+  }
 }
 
 #image-container {
@@ -216,9 +221,10 @@ width: 150px;
   transform: translate(-95%, 25%);
   width: 200px;
   height: 200px;
-  background-image: url('https://www.daffabot.my.id/pipe-vhs/img/aliandra-hd.png');
+  background-image: url("https://www.daffabot.my.id/pipe-vhs/img/aliandra-hd.png");
   background-color: #fff;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-bottom: 2em;
 }
